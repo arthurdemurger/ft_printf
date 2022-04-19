@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 22:23:38 by ademurge          #+#    #+#             */
-/*   Updated: 2022/04/19 16:12:37 by ademurge         ###   ########.fr       */
+/*   Created: 2022/04/19 15:16:59 by ademurge          #+#    #+#             */
+/*   Updated: 2022/04/19 16:10:20 by ademurge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+//#include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_printf(const char *str, ...)
 {
@@ -18,13 +19,14 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	
 	va_start(args, str);
-	i = -1;
-	while (str[++i])
-	{
-		if (str[i] == '%')
-			array_functions(str[++i], va_arg(args, const char));
-	}
-
+	va_arg(args, );
 	va_end(args);
+	return (0);
+}
+
+int main (void)
+{
+	
+	printf("%d", NULL);
 	return (0);
 }
