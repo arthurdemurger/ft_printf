@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   conversion.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 16:13:15 by ademurge          #+#    #+#             */
-/*   Updated: 2022/04/20 01:11:56 by ademurge         ###   ########.fr       */
+/*   Created: 2022/04/20 00:24:10 by ademurge          #+#    #+#             */
+/*   Updated: 2022/04/20 01:16:00 by ademurge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen(char *str)
+int	is_conversion(char c)
 {
-	size_t	i;
+	char	*lst_conv;
 
-	i = 0;
-	while (str && str[i])
-		i++;
-	return (i);
+	lst_conv = "cspdiuxX%";
+	while (*lst_conv)
+		if (c == *lst_conv++)
+			return (1);
+	return (0);
+}
+
+void	do_conversion(char c, va_list args)
+{
+	if (c == 's')
+		ft_putstr(va_arg(args, char *));
+	else if (c == 'c')
+		ft_putchar(va_arg(args, int));
+	else if (c == 'd')
+		ft_putnbr(va_arg(args, int));
 }
