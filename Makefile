@@ -6,11 +6,14 @@
 #    By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 22:21:01 by ademurge          #+#    #+#              #
-#    Updated: 2022/04/19 14:50:46 by ademurge         ###   ########.fr        #
+#    Updated: 2022/04/20 10:38:08 by ademurge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= 	ft_printf.c
+SRCS			= 	conversion.c \
+					ft_printf_utils.c \
+					ft_printf.c \
+					print_functions.c
 
 OBJS			= ${SRCS:.c=.o}
 
