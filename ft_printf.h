@@ -6,7 +6,7 @@
 /*   By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 22:21:16 by ademurge          #+#    #+#             */
-/*   Updated: 2022/04/20 01:17:57 by ademurge         ###   ########.fr       */
+/*   Updated: 2022/04/20 16:28:28 by ademurge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,44 @@
 // TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE
 
 /*
+** Define Constants
+*/
+
+# define SIGNED 1
+# define UNSIGNED 0
+
+/*
 ** Printf function
 */
 
 int		ft_printf(const char *, ...);
 
 /*
-** Print functions
+** Utils functions
 */
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-void	ft_putnbr(int n);
+int		ft_strlen(char *str);
+void	ft_putchar(char c, int *count);
+void	ft_putstr(char *str, int *count);
+void	ft_putnbr(int n, int *count);
+
+/*
+** Number conversion functions
+*/
+
+void	ft_putnbr_base(int nbr, int sign, char *base_set, int *count);
 
 /*
 ** Conversion functions
 */
 
 int		is_conversion(char c);
-void	do_conversion(char c, va_list args);
+void	do_conversion(char c, va_list args, int *count);
 
 /*
-** Utils functions
+** Print memory functions
 */
 
-size_t	ft_strlen(char *str);
+void	ft_print_address(void *add, int *count);
 
 #endif
