@@ -6,7 +6,7 @@
 /*   By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 00:24:10 by ademurge          #+#    #+#             */
-/*   Updated: 2022/04/21 14:56:00 by ademurge         ###   ########.fr       */
+/*   Updated: 2022/04/21 22:49:29 by ademurge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ void	do_conversion(char c, va_list args, int *count)
 	else if (c == 'p')
 		ft_print_address(va_arg(args, void *), count);
 	else if (c == 'd' || c == 'i')
-		ft_putnbr_base(va_arg(args, int), SIGNED, "0123456789", count);
-	else if (c == 'u' || c == 'u')
-		ft_putnbr_base(va_arg(args, int), UNSIGNED, "0123456789", count);
+		ft_putnbr_base(va_arg(args, int), SIGNED, DECIMAL, count);
+	else if (c == 'u')
+		ft_putnbr_base(va_arg(args, int), UNSIGNED, DECIMAL, count);
 	else if (c == 'x')
-		ft_putnbr_base(va_arg(args, int), UNSIGNED, "0123456789abcdef", count);
+		ft_putnbr_base(va_arg(args, int), UNSIGNED, LOW_HEXADECIMAL, count);
 	else if (c == 'X')
-		ft_putnbr_base(va_arg(args, int), UNSIGNED, "0123456789ABCDEF", count);
+		ft_putnbr_base(va_arg(args, int), UNSIGNED, UP_HEXADECIMAL, count);
 	else if (c == '%')
 		ft_putchar('%', count);
 }

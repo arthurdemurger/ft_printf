@@ -6,7 +6,7 @@
 /*   By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 22:21:16 by ademurge          #+#    #+#             */
-/*   Updated: 2022/04/20 16:28:28 by ademurge         ###   ########.fr       */
+/*   Updated: 2022/04/21 22:49:11 by ademurge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-# include <stdio.h>
-
-// TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE
-# define ICI printf("ici\n");
-// TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE TO DELETE
 
 /*
 ** Define Constants
 */
 
+# define DECIMAL "0123456789"
+# define UP_HEXADECIMAL "0123456789ABCDEF"
+# define LOW_HEXADECIMAL "0123456789abcdef"
 # define SIGNED 1
 # define UNSIGNED 0
 

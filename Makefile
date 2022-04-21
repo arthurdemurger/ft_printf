@@ -6,7 +6,7 @@
 #    By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 22:21:01 by ademurge          #+#    #+#              #
-#    Updated: 2022/04/20 16:26:27 by ademurge         ###   ########.fr        #
+#    Updated: 2022/04/21 22:54:43 by ademurge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,11 +31,8 @@ $(NAME):		${OBJS}
 
 all:			$(NAME)
 
-bonus:			$(BONUS_OBJS) $(OBJS)
-				@ar -rcs $(NAME) $^
-				@echo "...Everything + Bonus compiled!"
 clean:
-				@rm -f ${OBJS} $(BONUS_OBJS)
+				@rm -f ${OBJS}
 
 fclean:			clean
 				@rm -f $(NAME)
@@ -44,4 +41,4 @@ fclean:			clean
 re:				fclean all
 				@echo "...Completed!"
 
-.PHONY:		all clean fclean re print
+.PHONY:		all clean fclean re
