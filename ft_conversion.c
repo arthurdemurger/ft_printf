@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conversion.c                                       :+:      :+:    :+:   */
+/*   ft_conversion.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 00:24:10 by ademurge          #+#    #+#             */
-/*   Updated: 2022/04/20 16:23:00 by ademurge         ###   ########.fr       */
+/*   Updated: 2022/04/21 14:56:00 by ademurge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	do_conversion(char c, va_list args, int *count)
 	if (c == 'c')
 		ft_putchar(va_arg(args, int), count);
 	else if (c == 's')
-		ft_putstr(va_arg(args, char *), count);
+		ft_putstr(va_arg(args, void *), count);
 	else if (c == 'p')
 		ft_print_address(va_arg(args, void *), count);
 	else if (c == 'd' || c == 'i')
