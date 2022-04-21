@@ -6,7 +6,7 @@
 #    By: ademurge <ademurge@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 22:21:01 by ademurge          #+#    #+#              #
-#    Updated: 2022/04/21 22:54:43 by ademurge         ###   ########.fr        #
+#    Updated: 2022/04/21 22:59:28 by ademurge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS			= 	ft_conversion.c \
 					ft_printf.c \
 					ft_putnbr_base.c
 
-OBJS			= ${SRCS:.c=.o}
+OBJS			= $(addprefix srcs/, ${SRCS:.c=.o})
 
 NAME			= libftprintf.a
 
